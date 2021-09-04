@@ -1,1 +1,5 @@
-INSERT INTO CARRO(chassi, nome, marca, cor , valor, ano_fabricacao) VALUES('9BBNSZPPA288003333','New Fiesta','ford','branco', '28100','2015')
+INSERT INTO CARRO(chassi, nome, marca, cor , valor, ano_fabricacao) VALUES('9BBNSZPPA28800301','New Fiesta','ford','branco', '28100','2015')
+INSERT INTO CARRO(chassi, nome, marca, cor , valor, ano_fabricacao) VALUES('9BBNSZPPA28800302','New Fiesta','ford','branco', '28100','2015')
+INSERT INTO CARRO(chassi, nome, marca, cor , valor, ano_fabricacao) VALUES('9BBNSZPPA28800303','New Fiesta','ford','branco', '28100','2015')
+INSERT INTO CARRO(chassi, nome, marca, cor , valor, ano_fabricacao) VALUES('9BBNSZPPA28800304','New Fiesta','ford','branco', '28100','2015')
+INSERT INTO CARRO(chassi, nome, marca, cor , valor, ano_fabricacao) VALUES('9BBNSZPPA28800305','New Fiesta','ford','branco', '28100','2015')
