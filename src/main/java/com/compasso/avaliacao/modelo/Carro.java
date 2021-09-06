@@ -1,9 +1,10 @@
 package com.compasso.avaliacao.modelo;
-import javax.persistence.*;
+
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.util.Objects;
 
 @Entity
 public class Carro {
@@ -14,6 +15,9 @@ public class Carro {
     private String cor;
     private BigDecimal valor;
     private Integer anoFabricacao;
+
+    public Carro() {
+    }
 
     public Carro(String chassi, String nome, String marca, String cor, BigDecimal valor, Integer anoFabricacao) {
         this.chassi = chassi;
@@ -70,5 +74,19 @@ public class Carro {
 
     public void setAnoFabricacao(Integer anoFabricacao) {
         this.anoFabricacao = anoFabricacao;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Carro)) return false;
+        Carro carro = (Carro) o;
+        return chassi.equals(carro.chassi);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(chassi);
     }
 }

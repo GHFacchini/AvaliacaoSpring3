@@ -1,10 +1,9 @@
 package com.compasso.avaliacao.controller.dto;
 
 import com.compasso.avaliacao.modelo.Carro;
+import org.springframework.data.domain.Page;
 
 import java.math.BigDecimal;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class CarroDto {
     private String chassi;
@@ -47,7 +46,7 @@ public class CarroDto {
         return anoFabricacao;
     }
 
-    public static List<CarroDto> converter(List<Carro> carros) {
-        return carros.stream().map(CarroDto::new).collect(Collectors.toList());
+    public static Page<CarroDto> converter(Page<Carro> carros) {
+        return carros.map(CarroDto::new);
     }
 }
