@@ -49,6 +49,7 @@ public class CarrosController {
     }
 
     @PostMapping
+    @Transactional
     public ResponseEntity<CarroDto> cadastrar(@RequestBody @Valid CarroForm carroForm, UriComponentsBuilder uriBuilder) {
         Carro carro = carroForm.converter();
         carroRepository.save(carro);

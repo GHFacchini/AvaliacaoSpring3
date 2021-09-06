@@ -10,8 +10,8 @@ import java.time.LocalDate;
 @EnableSpringDataWebSupport
 public class AvaliacaoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AvaliacaoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AvaliacaoApplication.class, args);
+    }
 
 }

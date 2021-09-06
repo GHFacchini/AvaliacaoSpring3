@@ -7,28 +7,36 @@ import java.math.BigDecimal;
 import javax.validation.constraints.*;
 
 public class CarroForm {
-    @NotNull @NotEmpty @Length(min = 17, max = 17)
+    @NotNull
+    @NotEmpty
+    @Length(min = 17, max = 17)
     private String chassi;
 
-    @NotNull @NotEmpty
+    @NotNull
+    @NotEmpty
     private String nome;
 
-    @NotNull @NotEmpty
+    @NotNull
+    @NotEmpty
     private String marca;
 
-    @NotNull @NotEmpty
+    @NotNull
+    @NotEmpty
     private String cor;
 
-    @NotNull @DecimalMin("0")
+    @NotNull
+    @DecimalMin("0")
     private BigDecimal valor;
 
     //não consegui colocar dinamicamente como LocalDate.now().getYear()
-    @NotNull @Min(1769) @Max(2021)
+    @NotNull
+    @Min(1769)
+    @Max(2021)
     private Integer anoFabricacao;
 
     public Carro converter() {
-        return new Carro(chassi,nome,marca,cor,valor,anoFabricacao);
-        }
+        return new Carro(chassi, nome, marca, cor, valor, anoFabricacao);
+    }
 
     public String getChassi() {
         return chassi;

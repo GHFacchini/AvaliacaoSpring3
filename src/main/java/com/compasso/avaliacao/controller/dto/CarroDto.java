@@ -13,7 +13,7 @@ public class CarroDto {
     private BigDecimal valor;
     private Integer anoFabricacao;
 
-    public CarroDto(Carro carro){
+    public CarroDto(Carro carro) {
         this.chassi = carro.getChassi();
         this.nome = carro.getNome();
         this.marca = carro.getMarca();

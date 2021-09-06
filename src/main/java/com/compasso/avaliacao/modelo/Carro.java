@@ -76,7 +76,7 @@ public class Carro {
         this.anoFabricacao = anoFabricacao;
     }
 
-
+    //não tenho certeza se esse equals e hashcode estão 100% corretos mas foi o criado automaticamente pelo Intellij
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
