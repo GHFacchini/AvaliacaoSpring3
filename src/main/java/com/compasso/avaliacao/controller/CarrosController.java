@@ -19,7 +19,7 @@ import java.net.URI;
 
 
 @RestController
-@RequestMapping("/carros")
+@RequestMapping("/api/carros")
 public class CarrosController {
 
     @Autowired
@@ -52,7 +52,7 @@ public class CarrosController {
         Carro carro = carroForm.converter();
         carroRepository.save(carro);
 
-        URI uri = uriBuilder.path("/carros/{id}").buildAndExpand(carro.getChassi()).toUri();
+        URI uri = uriBuilder.path("/api/carros/{id}").buildAndExpand(carro.getChassi()).toUri();
         return ResponseEntity.created(uri).body(new CarroDto(carro));
     }
 
